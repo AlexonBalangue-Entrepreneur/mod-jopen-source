@@ -2,15 +2,16 @@
 /**
  * @package	Module for Joomla!
  * @subpackage  mod_opensource
- * @version	2.2.3
+ * @version	2.4.2
  * @author	AlexonBalangue.me
- * @copyright	(C) 2012-2016 Alexon Balangue. All rights reserved.
- * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @copyright	(C) 2012-2018 Alexon Balangue. All rights reserved.
+ * @license	GNU/LGPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die;
 
 $jqueryui_themes = $params->get('jqueryui-site-themes');
 $waypointsJs_site = $params->get('waypointsjs-site');
+$holderJs_site = $params->get('holderjs-site');
 $ParallaxJs_site = $params->get('parallaxjs-site');
 $bootstrap_site = $params->get('bootstrap-site');
 $icofont_site = $params->get('icofont-site');

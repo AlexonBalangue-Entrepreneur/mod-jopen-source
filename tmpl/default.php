@@ -2,10 +2,10 @@
 /**
  * @package	Module for Joomla!
  * @subpackage  mod_opensource
- * @version	2.4
+ * @version	2.4.2
  * @author	AlexonBalangue.me
- * @copyright	(C) 2012-2016 Alexon Balangue. All rights reserved.
- * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @copyright	(C) 2012-2018 Alexon Balangue. All rights reserved.
+ * @license	GNU/LGPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die;
 
@@ -291,15 +291,6 @@ defined('_JEXEC') or die;
 						$docs->addStyleSheet($proto_fi.'api.mapbox.com/mapbox.js/v3.1.1/mapbox.css'); 
 					endif;
 				break;
-				case 2: 
-					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js' );  
-						$docs->addStyleSheet($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css'); 
-					else : 
-						echo "\n".'<script src="'.$proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js"></script>'; 
-						$docs->addStyleSheet($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css'); 
-					endif;
-				break;
 			endswitch;
 			switch($popper_site):
 				case 1: 
@@ -307,6 +298,15 @@ defined('_JEXEC') or die;
 						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js' );  
 					else : 
 						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js"></script>'; 
+					endif;
+				break;
+			endswitch;
+			switch($holderJs_site):
+				case 1: 
+					if($html4or5_config == 0): 
+						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js' );  
+					else : 
+						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>'; 
 					endif;
 				break;
 			endswitch;
