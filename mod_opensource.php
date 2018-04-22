@@ -2,12 +2,17 @@
 /**
  * @package	Module for Joomla!
  * @subpackage  mod_opensource
- * @version	2.4.2
+ * @version	3.0 Alpha
  * @author	AlexonBalangue.me
  * @copyright	(C) 2012-2018 Alexon Balangue. All rights reserved.
  * @license	GNU/LGPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die;
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+#use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Helper\ModuleHelper;
+use Joomla\CMS\Router\Route;
 
 $jqueryui_themes = $params->get('jqueryui-site-themes');
 $waypointsJs_site = $params->get('waypointsjs-site');
@@ -101,4 +106,4 @@ $amp_brightcove = $params->get('amp-brightcove');
 $amp_analytics = $params->get('amp-analytics');
 
 
-require JModuleHelper::getLayoutPath('mod_opensource', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_opensource', $params->get('layout', 'default'));
