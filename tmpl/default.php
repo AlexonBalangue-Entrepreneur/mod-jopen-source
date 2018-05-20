@@ -2,7 +2,7 @@
 /**
  * @package	Module for Joomla!
  * @subpackage  mod_opensource
- * @version	2.4.2
+ * @version	2.5
  * @author	AlexonBalangue.me
  * @copyright	(C) 2012-2018 Alexon Balangue. All rights reserved.
  * @license	GNU/LGPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,11 +13,11 @@ defined('_JEXEC') or die;
 
 <?php
 
-	$docs = JFactory::getDocument();
+	$docs = Factory::getDocument();
 	if(!empty($dnsprefetch_custom)){
 		$own_cdn = $dnsprefetch_custom; 
 	} else {
-		$own_cdn = JURI::root(true).'/media/mod_opensource'; 		
+		$own_cdn = Uri::root(true).'/media/mod_opensource'; 		
 	}	
 	switch($protos){
 		case 1: $proto_fi = '//'; break;	
@@ -383,7 +383,7 @@ defined('_JEXEC') or die;
 			endswitch;			
 			/*****************[Prerender and prefetch]******************/
 
-			if($dnsprefetch_yoursite == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.JURI::base().'">'); endif;
+			if($dnsprefetch_yoursite == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.Uri::base().'">'); endif;
 			if($dnsprefetch_googleapi == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.googleapis.com/">'); endif;
 			if($dnsprefetch_bootstrapcdn == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'netdna.bootstrapcdn.com/">'); endif;
 			if($dnsprefetch_jquery == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'code.jquery.com/">'); endif;

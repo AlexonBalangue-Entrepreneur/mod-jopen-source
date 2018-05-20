@@ -2,12 +2,12 @@
 <extension type="module" version="3.8" client="site" method="upgrade">
 	<name>Module - Open Source</name>
 	<author>Alexon Balangue</author>
-	<creationDate>6 April 2018</creationDate>
+	<creationDate>20 May 2018</creationDate>
 	<copyright>Copyright (C) 2012-2018 Alexon Balangue.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
-	<authorEmail>moi.sites@alexonbalangue.me</authorEmail>
+	<authorEmail>contacter@alexonbalangue.me</authorEmail>
 	<authorUrl>www.alexonbalangue.me</authorUrl>
-	<version>2.4.2</version>
+	<version>2.5</version>
 	<description>MOD_OPENSOURCE_XML_DESC</description>
 	<media destination="mod_opensource" folder="media">
 		<filename>index.html</filename>
