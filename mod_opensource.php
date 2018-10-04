@@ -9,15 +9,11 @@
  */
 defined('_JEXEC') or die;
 
-
-use Joomla\CMS\Application;
+/*
 use Joomla\CMS\Document;
-use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Factory;
-use Joomla\CMS\Language\Text;
-use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
-
+*/
 
 $waypointsJs_site = $params->get('waypointsjs-site');
 $holderJs_site = $params->get('holderjs-site');
@@ -27,15 +23,10 @@ $icofont_site = $params->get('icofont-site');
 $fontawesome_site = $params->get('fontawesome-site');
 $jquery_site = $params->get('jquery-site');
 $jqueryui_site = $params->get('jqueryui-site');
-
 $mapbox_site = $params->get('MapBox-site');
-
 $popper_site = $params->get('popper-site');
 $mootools_site = $params->get('mootools-site');
-
 $modernizr_site = $params->get('modernizr-site');
-
-
 $rotatorjs_site = $params->get('rotatorjs-site');
 $whhg_site = $params->get('whhg-site');
 $angularjs_site = $params->get('angularjs-site');
@@ -50,7 +41,6 @@ $cookiesEU_site = $params->get('cookiesEU-site');
 $AddToHomescreen_site = $params->get('AddToHomescreen-site');
 $ie_site = $params->get('ie-site');
 $respond_site = $params->get('respond-site');
-
 $animate_site = $params->get('animate-site');
 $wowjs_site = $params->get('wowjs-site');
 $fancyBox_site = $params->get('fancyBox-site');

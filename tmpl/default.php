@@ -13,11 +13,11 @@ defined('_JEXEC') or die;
 
 <?php
 
-	$docs = Factory::getDocument();
+	$docs = JFactory::getDocument();
 	if(!empty($dnsprefetch_custom)){
 		$own_cdn = $dnsprefetch_custom; 
 	} else {
-		$own_cdn = Uri::root(true).'/media/mod_opensource'; 		
+		$own_cdn = JUri::root(true).'/media/mod_opensource'; 		
 	}	
 	switch($protos){
 		case 1: $proto_fi = '//'; break;	
@@ -244,7 +244,7 @@ defined('_JEXEC') or die;
 			switch($fancyBox_site):
 				case 1: 
 					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.js' );
+						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.js' );
 					else : 
 						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.js"></script>'; 
 					endif;
@@ -289,7 +289,7 @@ defined('_JEXEC') or die;
 			endswitch;			
 			/*****************[Prerender and prefetch]******************/
 
-			if($dnsprefetch_yoursite == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.Uri::base().'">'); endif;
+			if($dnsprefetch_yoursite == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.JUri::base().'">'); endif;
 			if($dnsprefetch_googleapi == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.googleapis.com/">'); endif;
 			if($dnsprefetch_bootstrapcdn == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'netdna.bootstrapcdn.com/">'); endif;
 			if($dnsprefetch_jquery == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'code.jquery.com/">'); endif;
