@@ -2,7 +2,7 @@
 /**
  * @package	Module for Joomla!
  * @subpackage  mod_opensource
- * @version	2.6 beta
+ * @version	2.6
  * @author	AlexonBalangue.me
  * @copyright	(C) 2012-2018 Alexon Balangue. All rights reserved.
  * @license	GNU/LGPLv3 http://www.gnu.org/licenses/gpl-3.0.html
