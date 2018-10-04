@@ -26,8 +26,8 @@ defined('_JEXEC') or die;
 	}
 			switch($fontawesome_site):
 				case 1: 
-					$docs->addCustomTag( '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-					<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>' ); 
+					$docs->addCustomTag( '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+					<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>' ); 
 				break;
 			endswitch;
 			switch($icofont_site):
@@ -48,90 +48,18 @@ defined('_JEXEC') or die;
 			endswitch;
 			switch($jqueryui_site):
 				case 1: 
-					$docs->addStyleSheet( $proto_fi.'ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/'.$jqueryui_themes.'/jquery-ui.css' ); 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>'; endif;	
+					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css' ); 
+					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>'; endif;	
 				break;							
-			endswitch;
-			switch($jquerymobile_site):
-				case 1: 
-					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css' ); 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($qunit_site):
-				case 1: 
-					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/qunit/2.4.1/qunit.min.css' ); 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/qunit/2.4.1/qunit.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/qunit/2.4.1/qunit.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($sizzle_site):
-				case 1: 
-					if($html4or5_config == 0): $docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.3/sizzle.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/sizzle/2.3.3/sizzle.min.js"></script>'; endif;
-				break;
 			endswitch;
 			switch($mootools_site):
 				case 1: 
 					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js"></script>'; endif;
 				break;
 			endswitch;
-			switch($dojo_site):
-				case 1: 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'ajax.googleapis.com/ajax/libs/dojo/1.12.2/dojo/dojo.js' );  else : echo "\n".'<script src="'.$proto_fi.'ajax.googleapis.com/ajax/libs/dojo/1.12.2/dojo/dojo.js"></script>'; endif;
-				break;
-			endswitch;
 			switch($modernizr_site):
 				case 1: 
 					if($html4or5_config == 0): $docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($less_site):
-				case 1: 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/less.js/3.0.1/less.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/less.js/3.0.1/less.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($skel_site):
-				case 1: 
-					if($html4or5_config == 0): $docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($ivory_site):
-				case 1: 
-					$docs->addStyleSheetVersion($own_cdn.'/ivory/ivory.css' ); 
-				break;
-				case 2: 
-					$docs->addStyleSheetVersion($own_cdn.'/ivory/ivory.min.css' ); 
-				break;
-			endswitch;
-			switch($skeleton_site):
-				case 1: 
-					$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css' ); 
-				break;
-			endswitch;
-			switch($knacss_site):
-				case 1: 
-					$docs->addStyleSheetVersion($own_cdn.'/knacss/knacss.css' ); 
-				break;
-				case 2: 
-					$docs->addStyleSheetVersion($own_cdn.'/knacss/knacss.min.css' ); 
-				break;
-				case 3: 
-					$docs->addStyleSheet($proto_fi.'cdn.jsdelivr.net/knacss/4.4.0/knacss.css' ); 
-				break;
-			endswitch;
-			switch($fondationzurb_site):
-				case 1: 
-					$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css' ); 
-					if($html4or5_config == 0): $docs->addScript('cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>'; endif;
-				break;
-			endswitch;
-			switch($htmlkickstart_site):
-				case 1: 
-					$docs->addStyleSheetVersion($own_cdn.'/kickstart/kickstart.css' ); 
-					if($html4or5_config == 0): $docs->addScriptVersion($own_cdn.'/kickstart/kickstart.js' );  else : echo "\n".'<script src="'.$own_cdn.'/kickstart/kickstart.js"></script>'; endif;
-				break;
-				case 2: 
-					$docs->addStyleSheetVersion($own_cdn.'/kickstart/kickstart.min.css' ); 
-					if($html4or5_config == 0): $docs->addScriptVersion($own_cdn.'/kickstart/kickstart.min.js' );  else : echo "\n".'<script src="'.$own_cdn.'/kickstart/kickstart.min.js"></script>'; endif;
 				break;
 			endswitch;
 			switch($rotatorjs_site):
@@ -160,13 +88,17 @@ defined('_JEXEC') or die;
 			endswitch;
 			switch($angularjs_site):
 				case 1: 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>'; endif;
+					if($html4or5_config == 0): $docs->addScript( $proto_fi.'ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>'; endif;
 				break;
 			endswitch;
 			switch($bootstrap_site):
 				case 1: 
-					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>'; endif;
-					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css' ); 
+					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>'; endif;
+					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css' ); 
+				break;
+				case 2: 
+					if($html4or5_config == 0): $docs->addScript( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js' );  else : echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>'; endif;
+					$docs->addStyleSheet( $proto_fi.'cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css' ); 
 				break;
 			endswitch;
 			switch($cookiesEU_site):
@@ -217,12 +149,12 @@ defined('_JEXEC') or die;
 			switch($metroUI_site):
 				case 1: 
 					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/metro/4.1.12/js/metro.min.js' );  
+						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/metro/4.2.24/js/metro.min.js' );  
 					else : 
-						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/metro/4.1.12/js/metro.min.js"></script>'; 
+						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/metro/4.2.24/js/metro.min.js"></script>'; 
 					endif;
 					
-						$docs->addStyleSheet($proto_fi.'cloudflare.com/ajax/libs/metro/4.1.12/css/metro-all.min.css'); 
+						$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/metro/4.2.24/css/metro-all.min.css'); 
 				break;
 			endswitch; 
 			switch($weathericons_site):
@@ -241,24 +173,6 @@ defined('_JEXEC') or die;
 				break;
 				case 2: 
 					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-bootstrap.min.css' ); 
-				break;
-				case 3: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-foundation.css' ); 
-				break;
-				case 4: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-foundation.min.css' ); 
-				break;
-				case 5: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-glyphs.css' ); 
-				break;
-				case 6: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-glyphs.min.css' ); 
-				break;
-				case 7: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-glyphs-legacy.css' ); 
-				break;
-				case 8: 
-					$docs->addStyleSheetVersion($own_cdn.'/useiconic/iconic-glyphs-legacy.min.css' ); 
 				break;
 			endswitch;
 			switch($AddToHomescreen_site):
@@ -284,11 +198,11 @@ defined('_JEXEC') or die;
 			switch($mapbox_site):
 				case 1: 
 					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.'api.mapbox.com/mapbox.js/v3.1.1/mapbox.js' );  
-						$docs->addStyleSheet($proto_fi.'api.mapbox.com/mapbox.js/v3.1.1/mapbox.css'); 
+						$docs->addScript($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js' );  
+						$docs->addStyleSheet($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css'); 
 					else : 
-						echo "\n".'<script src="'.$proto_fi.'api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>'; 
-						$docs->addStyleSheet($proto_fi.'api.mapbox.com/mapbox.js/v3.1.1/mapbox.css'); 
+						echo "\n".'<script src="'.$proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js"></script>'; 
+						$docs->addStyleSheet($proto_fi.'api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css'); 
 					endif;
 				break;
 			endswitch;
@@ -315,7 +229,7 @@ defined('_JEXEC') or die;
 
 			switch($animate_site):
 				case 1: 
-						$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'); 
+						$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'); 
 				break;
 			endswitch;
 			switch($wowjs_site):
@@ -330,22 +244,15 @@ defined('_JEXEC') or die;
 			switch($fancyBox_site):
 				case 1: 
 					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js' );
+						$docs->addScript($proto_fi.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.js' );
 					else : 
-						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>'; 
+						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.js"></script>'; 
 					endif;
-						$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css', 'text/css', 'screen'); 
+						$docs->addStyleSheet($proto_fi.'cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.1/jquery.fancybox.min.css', 'text/css', 'screen'); 
 				break;
 			endswitch;
 			switch($CountUPJs_site):
 				case 1: 
-					if($html4or5_config == 0): 
-						$docs->addScriptVersion($proto_fi.'cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/angular-countUp.min.js' );
-					else : 
-						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/angular-countUp.min.js"></script>'; 
-					endif;
-				break;
-				case 2: 
 					if($html4or5_config == 0): 
 						$docs->addScriptVersion($proto_fi.'cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js' );
 					else : 
@@ -354,7 +261,6 @@ defined('_JEXEC') or die;
 				break;
 			endswitch;	
 			switch($waypointsJs_site):
-				
 				case 1: 
 					if($html4or5_config == 0): 
 						$docs->addScriptVersion($proto_fi.'cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js' );
@@ -375,9 +281,9 @@ defined('_JEXEC') or die;
 			switch($smoothJs_site):
 				case 1: 
 					if($html4or5_config == 0): 
-						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js' ); 
+						$docs->addScript($proto_fi.'cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js' ); 
 					else : 
-						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>'; 
+						echo "\n".'<script src="'.$proto_fi.'cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js"></script>'; 
 					endif;
 				break;
 			endswitch;			
