@@ -19,11 +19,9 @@ defined('_JEXEC') or die;
 	} else {
 		$own_cdn = JUri::root(true).'/media/mod_opensource'; 		
 	}	
-	switch($protos){
-		case 1: $proto_fi = '//'; break;	
-		case 2: $proto_fi = 'http://'; break;	
-		case 3: $proto_fi = 'https://'; break;	
-	}
+	
+		$proto_fi = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
+	
 			switch($fontawesome_site):
 				case 1: 
 					$docs->addCustomTag( '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
