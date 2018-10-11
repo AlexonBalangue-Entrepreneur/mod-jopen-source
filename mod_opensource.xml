@@ -2,7 +2,7 @@
 <extension type="module" version="3.8" client="site" method="upgrade">
 	<name>Module - Open Source</name>
 	<author>Alexon Balangue</author>
-	<creationDate>5 september 2018</creationDate>
+	<creationDate>11 september 2018</creationDate>
 	<copyright>Copyright (C) 2012-2018 Alexon Balangue.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
 	<authorEmail>contacter@alexonbalangue.me</authorEmail>
@@ -67,17 +67,7 @@
 					label="fontawesome"
 					description="">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">fontawesme v5.3.1</option>
-				</field>
-				<field 
-					name="icofont-site"
-					 type="list" 
-					default="0"
-					label="Icofont"
-					description="Version 1.0.0-alpha by Sharpbootstrap">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">base</option>
-						<option value="2">minified</option>
+						<option value="1">fontawesme v5.3.1 (free)</option>
 				</field>
 				<field 
 					name="popper-site"
@@ -121,7 +111,7 @@
 					 type="radio" 
 					default="0"
 					label="Mootools"
-					description="Version 1.6">
+					description="Version 1.6.0">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">CDN CloudFlare minified</option>
 				</field>	
@@ -135,16 +125,6 @@
 						<option value="1">Cloudflare CDN minified</option>
 				</field>
 				<field 
-					name="rotatorjs-site"
-					 type="radio" 
-					default="0"
-					label="Rotator.js"
-					description="Version 0.9.8 R05.21.12">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">base</option>
-						<option value="2">minified</option>
-				</field>
-				<field 
 					name="jqueryeasingjs-site"
 					 type="radio" 
 					default="0"
@@ -152,16 +132,6 @@
 					description="Version 1.4.1">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">CDN Cloudflare minifield</option>
-				</field>
-				<field 
-					name="whhg-site"
-					 type="radio" 
-					default="0"
-					label="whhg"
-					description="Version 31 May 2017 to 3:40AM (downloaded)">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">local base</option>
-						<option value="2">local minified</option>
 				</field>
 				<field 
 					name="angularjs-site"
@@ -190,28 +160,7 @@
 					description="Version 0.49.0">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">mapbox.com  (CDN minified) </option>
-				</field>
-				<field 
-					name="cookiesEU-site"
-					 type="list" 
-					default="0"
-					label="Cookies (E.U.)"
-					description="Jquery Cookie Version 1.4.1">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">minified (Expert CDN CloudFlare)</option>
-						<option value="2">minified (Novice CDN CloudFlare)</option>
-						<option value="3">minified (Novice CDN CloudFlare/CSS Own Custom)</option>
-						<option value="4">minified (expert js/CSS Own Custom)</option>
 				</field>	
-				<field 
-					name="metroUI-site"
-					 type="list" 
-					default="0"
-					label="Metro UI "
-					description="Version 4.2.24">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">minified CloudFlare CDN</option>
-				</field>
 				<field 
 					name="weather-icons-site"
 					 type="list" 
@@ -229,26 +178,6 @@
 					description="Version 2.0.9">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">minified CloudFlare CDN </option>
-				</field>
-				<field 
-					name="useiconic-site"
-					 type="list" 
-					default="0"
-					label="iconic icons (Version Gratuite)"
-					description="Version try/essaie">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">base (bootstrap) </option>
-						<option value="2">minified (bootstrap) </option>
-				</field>
-				<field 
-					name="AddToHomescreen-site"
-					 type="list" 
-					default="0"
-					label="ADD to Homescreen"
-					description="Version 3.2.3">
-						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">base </option>
-						<option value="2">minified </option>
 				</field>
 			</fieldset>
 			<fieldset name="effect-styles" label="Effect/effet">
@@ -275,7 +204,7 @@
 					 type="list" 
 					default="0"
 					label="fancyBox"
-					description="Version 3.5.1">
+					description="Version 3.5.2">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">CloudFlare CDN minified</option>
 				</field>
@@ -323,313 +252,12 @@
 					 type="list" 
 					default="0"
 					label="html5shiv/respond"
-					description="html5shiv Version 3.7.3 / respond.js version 1.4.2">
+					description="html5shiv Version 3.7.3">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">CloudFlare CDN minified (Prod)</option>
 				</field>
 			</fieldset>
-			<fieldset name="amphtml-pre" label="AMP-HTML">	
-				<field 
-					name="amp-start"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-HTML (start/responsive)"
-					description="require before add news">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-youtube"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-youtube"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-access"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-access"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-vine"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-vine"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-accordion"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-accordion"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-twitter"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-twitter"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-pinterest"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-pinterest"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-instagram"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-instagram"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-soundcloud"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-soundcloud"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-usernotification"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-user-notification"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-iframe"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-iframe"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-facebook"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-facebook"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-vimeo"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-vimeo"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-lightbox"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-lightbox"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-dailymotion"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-dailymotion"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-font"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-font"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-fittext"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-fit-text"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-list"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-list"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-installserviceworker"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-install-serviceworker"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-carousel"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-carousel"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-imagelightbox"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-image-lightbox"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-audio"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-audio"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-anim"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-anim"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-analytics"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-analytics"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-ad"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-ad"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-embed"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-embed"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-img"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-img"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-pixel"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-pixel"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-video"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-video"
-					description="">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-				<field 
-					name="amp-start"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="no"
-					label="AMP-HTML"
-					description="require before add news">
-						<option value="yes">JYes</option>
-						<option value="no">JNo</option>
-				</field>
-			</fieldset>
+			
 			<fieldset name="advanced-pre" label="Prerender and prefetch support">
 				<field 
 					type="spacer" 
