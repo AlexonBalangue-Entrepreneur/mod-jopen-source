@@ -9,15 +9,6 @@
 	<authorUrl>www.alexonbalangue.me</authorUrl>
 	<version>2.6</version>
 	<description>MOD_OPENSOURCE_XML_DESC</description>
-	<media destination="mod_opensource" folder="media">
-		<filename>index.html</filename>
-		<folder>icofont</folder>
-		<folder>rotatorjs</folder>
-		<folder>useiconic</folder>
-		<folder>whhg</folder>
-		<folder>cookies</folder>
-		<folder>homescreen</folder>	
-	</media>
 	<files>
 		<filename module="mod_opensource">mod_opensource.php</filename>
 		<filename>mod_opensource.xml</filename>

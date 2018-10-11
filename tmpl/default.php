@@ -13,17 +13,12 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Application;
+#use Joomla\CMS\Application;
 use Joomla\CMS\Document;
 
 
 	$docs = Factory::getDocument();
-	if(!empty($dnsprefetch_custom)){
-		$own_cdn = $dnsprefetch_custom; 
-	} else {
-		$own_cdn = Uri::root(true).'/media/mod_opensource'; 		
-	}	
-	
+
 		$proto_fi = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
 		$proto_fi .= '://';
 	
@@ -203,31 +198,31 @@ use Joomla\CMS\Document;
 			/*****************[Prerender and prefetch]******************/
 
 			if($dnsprefetch_yoursite == 1): 
-				HTMLHelper::stylesheet(Uri::base(), null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.Uri::base().'">'); 
 			endif;
 			if($dnsprefetch_googleapi == 1): 
-				HTMLHelper::stylesheet($proto_fi.'ajax.googleapis.com', null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.googleapis.com">'); 
 			endif;
 			if($dnsprefetch_bootstrapcdn == 1): 
-				HTMLHelper::stylesheet($proto_fi.'netdna.bootstrapcdn.com', null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'netdna.bootstrapcdn.com">'); 
 			endif;
 			if($dnsprefetch_jquery == 1): 
-				HTMLHelper::stylesheet($proto_fi.'code.jquery.com', null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'code.jquery.com">'); 
 			endif;
 			if($dnsprefetch_cdnjscloudflare == 1): 
-				HTMLHelper::stylesheet($proto_fi.'cdnjs.cloudflare.com', null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'cdnjs.cloudflare.com">'); 
 			endif;
 			if($dnsprefetch_aspnetcdn == 1): 
-				HTMLHelper::stylesheet($proto_fi.'ajax.aspnetcdn.com', null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.aspnetcdn.com">'); 
 			endif;
 			if(!empty($dnsprefetch_custom)): 
-				HTMLHelper::stylesheet($dnsprefetch_custom, null, array('rel' => 'dns-prefetch'));
+				$docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.$dnsprefetch_custom.'" />');
 			endif;
 			if(!empty($prerender_url)): 
-				HTMLHelper::stylesheet($prerender_url, null, array('rel' => 'prerender'));
+				$docs->addCustomTag('<link rel="prerender" href="'.$prerender_url.'">'); 
 			endif;
 			if(!empty($prefetch_url)): 
-				HTMLHelper::stylesheet($prefetch_url, null, array('rel' => 'prefetch'));
+				$docs->addCustomTag('<link rel="prefetch" href="'.$prefetch_url.'">'); 
 			endif;
 			
 			/*****************[IE SUPPORT]******************/
