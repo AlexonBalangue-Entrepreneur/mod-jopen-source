@@ -49,16 +49,6 @@
 						<option value="1">HTML5</option>
 				</field>
 				<field 
-					name="protos"
-					 type="list" 
-					default="1"
-					label="Protocols CDN"
-					description="" >
-						<option value="1">//</option>
-						<option value="2">http://</option>
-						<option value="3">https://</option>
-				</field>
-				<field 
 					name="dnsprefetch_custom"
 					type="text" 
 					default=""
@@ -142,7 +132,7 @@
 					label="Modernizr"
 					description="Version 2.8.3">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="2">Cloudflare CDN minified</option>
+						<option value="1">Cloudflare CDN minified</option>
 				</field>
 				<field 
 					name="rotatorjs-site"
@@ -172,7 +162,6 @@
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
 						<option value="1">local base</option>
 						<option value="2">local minified</option>
-						<option value="3">Site WHHG</option>
 				</field>
 				<field 
 					name="angularjs-site"
@@ -209,13 +198,10 @@
 					label="Cookies (E.U.)"
 					description="Jquery Cookie Version 1.4.1">
 						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">minified (Expert CDN jsdelivr)</option>
-						<option value="2">minified (Expert CDN CloudFlare)</option>
-						<option value="3">minified (Novice CDN CloudFlare)</option>
-						<option value="4">minified (Novice CDN CloudFlare/CSS Own Custom)</option>
-						<option value="5">minified (Novice CDN jsdelivr)</option>
-						<option value="6">minified (Novice CDN jsdelivr/CSS Own Custom)</option>
-						<option value="7">minified (expert js/CSS Own Custom)</option>
+						<option value="1">minified (Expert CDN CloudFlare)</option>
+						<option value="2">minified (Novice CDN CloudFlare)</option>
+						<option value="3">minified (Novice CDN CloudFlare/CSS Own Custom)</option>
+						<option value="4">minified (expert js/CSS Own Custom)</option>
 				</field>	
 				<field 
 					name="metroUI-site"
@@ -335,14 +321,11 @@
 				<field 
 					name="ie-site"
 					 type="list" 
-					default="4"
+					default="0"
 					label="html5shiv/respond"
 					description="html5shiv Version 3.7.3 / respond.js version 1.4.2">
-						<option value="">JFIELD_MOD_OPENSOURCE_HIDE</option>
-						<option value="1">MaxCDN minified (DEV)</option>
-						<option value="2">jsdelivr CDN minified (DEV)</option>
-						<option value="3">CloudFlare CDN minified (DEV)</option>
-						<option value="4">CloudFlare CDN minified (Prod)</option>
+						<option value="0">JFIELD_MOD_OPENSOURCE_HIDE</option>
+						<option value="1">CloudFlare CDN minified (Prod)</option>
 				</field>
 			</fieldset>
 			<fieldset name="amphtml-pre" label="AMP-HTML">	
