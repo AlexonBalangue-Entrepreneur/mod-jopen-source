@@ -202,17 +202,33 @@ use Joomla\CMS\Document;
 			endswitch;			
 			/*****************[Prerender and prefetch]******************/
 
-			if($dnsprefetch_yoursite == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.JUri::base().'">'); endif;
-			if($dnsprefetch_googleapi == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.googleapis.com/">'); endif;
-			if($dnsprefetch_bootstrapcdn == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'netdna.bootstrapcdn.com/">'); endif;
-			if($dnsprefetch_jquery == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'code.jquery.com/">'); endif;
-			if($dnsprefetch_cdnjscloudflare == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'cdnjs.cloudflare.com/">'); endif;
-			if($dnsprefetch_aspnetcdn == 1): $docs->addCustomTag('<link rel="dns-prefetch" href="'.$proto_fi.'ajax.aspnetcdn.com/">'); endif;
-			if(!empty($dnsprefetch_custom)): 
-				$docs->addCustomTag('<link rel="dns-prefetch" href="http:'.$dnsprefetch_custom.'" />');
+			if($dnsprefetch_yoursite == 1): 
+				HTMLHelper::stylesheet(Uri::base(), null, array('rel' => 'dns-prefetch'));
 			endif;
-			if(!empty($prerender_url)): $docs->addCustomTag('<link rel="prerender" href="'.$prerender_url.'">'); endif;
-			if(!empty($prefetch_url)): $docs->addCustomTag('<link rel="prefetch" href="'.$prefetch_url.'">'); endif;
+			if($dnsprefetch_googleapi == 1): 
+				HTMLHelper::stylesheet($proto_fi.'ajax.googleapis.com', null, array('rel' => 'dns-prefetch'));
+			endif;
+			if($dnsprefetch_bootstrapcdn == 1): 
+				HTMLHelper::stylesheet($proto_fi.'netdna.bootstrapcdn.com', null, array('rel' => 'dns-prefetch'));
+			endif;
+			if($dnsprefetch_jquery == 1): 
+				HTMLHelper::stylesheet($proto_fi.'code.jquery.com', null, array('rel' => 'dns-prefetch'));
+			endif;
+			if($dnsprefetch_cdnjscloudflare == 1): 
+				HTMLHelper::stylesheet($proto_fi.'cdnjs.cloudflare.com', null, array('rel' => 'dns-prefetch'));
+			endif;
+			if($dnsprefetch_aspnetcdn == 1): 
+				HTMLHelper::stylesheet($proto_fi.'ajax.aspnetcdn.com', null, array('rel' => 'dns-prefetch'));
+			endif;
+			if(!empty($dnsprefetch_custom)): 
+				HTMLHelper::stylesheet($dnsprefetch_custom, null, array('rel' => 'dns-prefetch'));
+			endif;
+			if(!empty($prerender_url)): 
+				HTMLHelper::stylesheet($prerender_url, null, array('rel' => 'prerender'));
+			endif;
+			if(!empty($prefetch_url)): 
+				HTMLHelper::stylesheet($prefetch_url, null, array('rel' => 'prefetch'));
+			endif;
 			
 			/*****************[IE SUPPORT]******************/
 
